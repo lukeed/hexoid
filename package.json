@@ -1,6 +1,6 @@
 {
   "name": "hexoid",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": "lukeed/hexoid",
   "description": "A tiny (190B) and extremely fast utility to generate random IDs of fixed length",
   "unpkg": "dist/index.min.js",

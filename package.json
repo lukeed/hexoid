@@ -2,7 +2,7 @@
   "name": "hexoid",
   "version": "0.0.0",
   "repository": "lukeed/hexoid",
-  "description": "WIP",
+  "description": "A tiny (190B) and extremely fast utility to generate random IDs of fixed length",
   "unpkg": "dist/index.min.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -25,7 +25,13 @@
     "*.d.ts",
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "id",
+    "uid",
+    "uuid",
+    "random",
+    "generate"
+  ],
   "devDependencies": {
     "bundt": "1.0.0",
     "esm": "3.2.25",

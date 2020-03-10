@@ -1,38 +1,38 @@
 const uuid = require('uuid');
 const assert = require('assert');
 const { Suite } = require('benchmark');
+const nanoid = require('nanoid/non-secure');
 const Hash = require('hashids/cjs');
 const hexoid = require('../dist');
-const nanoid = require('nanoid');
-const foid = require('foid');
+const uid = require('uid');
 
 const size_16 = {
 	'hashids/fixed': new Hash('', 16),
-	'nanoid': nanoid.bind(nanoid, 16),
-	'foid': foid.bind(foid, 16),
+	'nanoid/non-secure': nanoid.bind(nanoid, 16),
+	'uid': uid.bind(uid, 16),
 	'hexoid': hexoid(16),
 };
 
 const size_25 = {
 	'cuid': require('cuid'),
 	'hashids/fixed': new Hash('', 25),
-	'nanoid': nanoid.bind(nanoid, 25),
-	'foid': foid.bind(foid, 25),
+	'nanoid/non-secure': nanoid.bind(nanoid, 25),
+	'uid': uid.bind(uid, 25),
 	'hexoid': hexoid(25),
 };
 
 const size_36 = {
 	'uuid/v1': uuid.v1,
 	'uuid/v4': uuid.v4,
-	'hashids/fixed': new Hash('', 36),
 	'@lukeed/uuid': require('@lukeed/uuid'),
-	'nanoid': nanoid.bind(nanoid, 36),
-	'foid': foid.bind(foid, 36),
+	'hashids/fixed': new Hash('', 36),
+	'nanoid/non-secure': nanoid.bind(nanoid, 36),
+	'uid': uid.bind(uid, 36),
 	'hexoid': hexoid(36),
 };
 
 function pad(str) {
-	return str + ' '.repeat(16 - str.length);
+	return str + ' '.repeat(20 - str.length);
 }
 
 function runner(group, size) {

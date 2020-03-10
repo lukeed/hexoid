@@ -65,47 +65,47 @@ const combos = 256 ** (len/2);
 
 ```
 Validation (length = 16):
-  ✔ hashids/fixed    (example: "LkQWjnegYbwZ1p0G")
-  ✔ nanoid           (example: "k6qi25oosFz_hlPd")
-  ✔ uid              (example: "io9bl0ky81phrodn")
-  ✔ hexoid           (example: "5bab7810c6878e00")
+  ✔ hashids/fixed        (example: "LkQWjnegYbwZ1p0G")
+  ✔ nanoid/non-secure    (example: "sLlVL5X3M5k2fo58")
+  ✔ uid                  (example: "3d0ckwcnjiuu91hj")
+  ✔ hexoid               (example: "de96b62e663ef300")
 Benchmark (length = 16):
-  hashids/fixed    x     340,277 ops/sec ±1.28% (97 runs sampled)
-  nanoid           x     477,956 ops/sec ±0.20% (96 runs sampled)
-  uid              x   3,589,929 ops/sec ±0.21% (94 runs sampled)
-  hexoid           x  79,801,437 ops/sec ±1.68% (94 runs sampled)
+  hashids/fixed        x     349,462 ops/sec ±0.28% (93 runs sampled)
+  nanoid/non-secure    x   3,337,573 ops/sec ±0.28% (96 runs sampled)
+  uid                  x   3,553,482 ops/sec ±0.51% (90 runs sampled)
+  hexoid               x  81,081,364 ops/sec ±0.18% (96 runs sampled)
 
 
 Validation (length = 25):
-  ✔ cuid             (example: "ck7bonwek0000zb7c3ujaaku0")
-  ✔ hashids/fixed    (example: "r9JOyLkQWjnegYbwZ1p0GDXNm")
-  ✔ nanoid           (example: "z7ru45m1JZ_D2Ti47DFhDXtWn")
-  ✔ uid              (example: "m8jmnv380cgbt1nn7f7kr4jvy")
-  ✔ hexoid           (example: "22ec2432c92aaebb1a26dcd00")
+  ✔ cuid                 (example: "ck7lj5hbf00000v7c9gox6yfh")
+  ✔ hashids/fixed        (example: "r9JOyLkQWjnegYbwZ1p0GDXNm")
+  ✔ nanoid/non-secure    (example: "hI202PVPJQRNrP6o6z4pXz4m0")
+  ✔ uid                  (example: "9904e9w130buxaw7n8358mn2f")
+  ✔ hexoid               (example: "01dfab2c14e37768eb7605a00")
 Benchmark (length = 25):
-  cuid             x     159,227 ops/sec ±1.36% (91 runs sampled)
-  hashids/fixed    x     328,628 ops/sec ±0.16% (98 runs sampled)
-  nanoid           x     431,160 ops/sec ±0.17% (97 runs sampled)
-  foid             x   2,433,882 ops/sec ±0.14% (96 runs sampled)
-  hexoid           x  76,449,294 ops/sec ±0.58% (97 runs sampled)
+  cuid                 x     161,636 ops/sec ±1.36% (89 runs sampled)
+  hashids/fixed        x     335,439 ops/sec ±2.40% (94 runs sampled)
+  nanoid/non-secure    x   2,254,073 ops/sec ±0.23% (96 runs sampled)
+  uid                  x   2,483,275 ops/sec ±0.38% (95 runs sampled)
+  hexoid               x  75,715,843 ops/sec ±0.27% (95 runs sampled)
 
 
 Validation (length = 36):
-  ✔ uuid/v1          (example: "7af0db80-5d30-11ea-b1d7-533043f62f4d")
-  ✔ uuid/v4          (example: "18ea9e0e-766e-4c1a-9a4a-3f7ef8bd8063")
-  ✔ hashids/fixed    (example: "EVq3Pr9JOyLkQWjnegYbwZ1p0GDXNmRBlAxg")
-  ✔ @lukeed/uuid     (example: "d6bbe55a-80a8-4ae4-bad6-936532f293a7")
-  ✔ nanoid           (example: "j0mr4IR8InpZC2jDxR6_ZybaiJIYpT21kF1m")
-  ✔ uid              (example: "0coxfi3yfc7mscyot1vcxltecj9v36iuszfk")
-  ✔ hexoid           (example: "4c93a50e3d9dc569a5a1882166ae9b971400")
+  ✔ uuid/v1              (example: "c3dc1ed0-629a-11ea-8bfb-8ffc49585f54")
+  ✔ uuid/v4              (example: "8c89f0ca-f01e-4c84-bd71-e645bab84552")
+  ✔ hashids/fixed        (example: "EVq3Pr9JOyLkQWjnegYbwZ1p0GDXNmRBlAxg")
+  ✔ @lukeed/uuid         (example: "069ad676-48f9-4452-b11d-f20c3872dc1f")
+  ✔ nanoid/non-secure    (example: "jAZjrcDmHH6P1rT9EFdCdHUpF440SjAKwb2A")
+  ✔ uid                  (example: "5mhi30lgy5d0glmuy81llelbzdko518ow1sx")
+  ✔ hexoid               (example: "615209331f0b4630acf69999ccfc95a23200")
 Benchmark (length = 36):
-  uuid/v1          x   1,520,287 ops/sec ±0.28% (96 runs sampled)
-  uuid/v4          x     334,842 ops/sec ±0.77% (91 runs sampled)
-  hashids/fixed    x     305,579 ops/sec ±1.97% (96 runs sampled)
-  @lukeed/uuid     x   6,332,668 ops/sec ±0.24% (93 runs sampled)
-  nanoid           x     401,099 ops/sec ±0.22% (95 runs sampled)
-  uid              x   1,766,605 ops/sec ±0.27% (98 runs sampled)
-  hexoid           x  72,034,782 ops/sec ±0.31% (95 runs sampled)
+  uuid/v1              x   1,487,947 ops/sec ±0.18% (98 runs sampled)
+  uuid/v4              x     334,868 ops/sec ±1.08% (90 runs sampled)
+  @lukeed/uuid         x   6,352,445 ops/sec ±0.27% (91 runs sampled)
+  hashids/fixed        x     322,914 ops/sec ±0.27% (93 runs sampled)
+  nanoid/non-secure    x   1,592,708 ops/sec ±0.25% (91 runs sampled)
+  uid                  x   1,789,492 ops/sec ±0.29% (92 runs sampled)
+  hexoid               x  71,746,692 ops/sec ±0.29% (93 runs sampled)
 ```
 
 ## Related

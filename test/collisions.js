@@ -1,6 +1,6 @@
 // $ node test/collisions 16 1e7
 const [len=8, cycles] = process.argv.slice(2);
-const hexoid = require('../../dist')(len);
+const hexoid = require('../dist')(len);
 const total = cycles ? +cycles : 1e6;
 
 console.log('~> item total:', total.toLocaleString());

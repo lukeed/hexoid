@@ -1,4 +1,4 @@
-# hexoid [![build status](https://badgen.net/github/status/lukeed/hexoid)](https://github.com/lukeed/hexoid/actions) [![codecov](https://badgen.now.sh/codecov/c/github/lukeed/hexoid)](https://codecov.io/gh/lukeed/hexoid)
+# hexoid [![CI](https://github.com/lukeed/hexoid/workflows/CI/badge.svg)](https://github.com/lukeed/hexoid/actions) [![codecov](https://badgen.now.sh/codecov/c/github/lukeed/hexoid)](https://codecov.io/gh/lukeed/hexoid)
 
 > A tiny (190B) and [extremely fast](#benchmarks) utility to generate random IDs of fixed length
 

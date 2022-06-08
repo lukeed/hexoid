@@ -5,15 +5,16 @@
   "description": "A tiny (190B) and extremely fast utility to generate random IDs of fixed length",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
-  "unpkg": "dist/index.min.js",
   "module": "dist/index.mjs",
+  "unpkg": "dist/index.min.js",
+  "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "types": "hexoid.d.ts",
   "license": "MIT",
   "author": {
     "name": "Luke Edwards",
@@ -39,7 +40,7 @@
     "generate"
   ],
   "devDependencies": {
-    "bundt": "1.0.0",
+    "bundt": "next",
     "esm": "3.2.25",
     "uvu": "0.5.3"
   }

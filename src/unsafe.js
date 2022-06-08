@@ -3,7 +3,7 @@ while (i<256) HEX[i]=(256+i++).toString(16).substring(1);
 
 export function hexoid(len){
 	len||(len=16);
-	var num=0,id=new Function('h','r','return '+new Array(((1+len)>>1)-1).fill('h[255*r.call()|0]').join('+')),str=id(HEX, r);
+	var num=0,id=new Function('h','r','return '+new Array(((1+len)>>1)-1).fill('h[256*r.call()|0]').join('+')),str=id(HEX, r);
 	return function(){
 		return (num === 255)
 			? (str=id(HEX, r))+HEX[num=0]

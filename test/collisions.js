@@ -2,11 +2,11 @@
 const [len=8, cycles] = process.argv.slice(2);
 const { hexoid } = require('../dist');
 
-const toUID = hexoid(len);
+const toUID = hexoid(+len);
 const total = cycles ? +cycles : 1e6;
 
 console.log('~> item total:', total.toLocaleString());
-console.log('~> hash length:', len);
+console.log('~> hash length:', +len);
 
 let sentry = new Set();
 let i=0, tmp, duplicates=0;

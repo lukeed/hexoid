@@ -25,11 +25,10 @@
     "node": ">=8"
   },
   "scripts": {
-    "build": "bundt",
+    "build": "node bin/build",
     "test": "uvu test -r esm -i collisions"
   },
   "files": [
-    "*.d.ts",
     "dist"
   ],
   "keywords": [
@@ -40,8 +39,8 @@
     "generate"
   ],
   "devDependencies": {
-    "bundt": "next",
     "esm": "3.2.25",
+    "terser": "4.8.0",
     "uvu": "0.5.3"
   }
 }

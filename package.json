@@ -9,6 +9,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
+    "./unsafe": {
+      "types": "./unsafe/index.d.ts",
+      "import": "./unsafe/index.mjs",
+      "require": "./unsafe/index.js"
+    },
     "./package.json": "./package.json"
   },
   "module": "dist/index.mjs",
@@ -28,7 +33,8 @@
     "test": "uvu test -r esm -i collisions"
   },
   "files": [
-    "dist"
+    "dist",
+    "unsafe"
   ],
   "keywords": [
     "id",

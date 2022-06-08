@@ -52,3 +52,5 @@ function transform(input, outputs) {
 }
 
 transform('src/index.js', pkg.exports['.']);
+console.log('---');
+transform('src/unsafe.js', pkg.exports['./unsafe']);

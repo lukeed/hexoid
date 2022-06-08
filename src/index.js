@@ -1,15 +1,12 @@
-var IDX=256, HEX=[];
-while (IDX--) HEX[IDX] = (IDX + 256).toString(16).substring(1);
+var i=0,HEX=[],r=Math.random;
+while (i<256) HEX[i]=(256+i++).toString(16).substring(1);
 
-export default function (len) {
-	len = len || 16;
-	var str='', num=0;
-	return function () {
-		if (!str || num === 256) {
-			str=''; num=(1+len)/2 | 0;
-			while (num--) str += HEX[256 * Math.random() | 0];
-			str = str.substring(num=0, len-2);
-		}
-		return str + HEX[num++];
+export default function(len){
+	len||(len=16);
+	var num=0,id=new Function('h','r','return '+new Array(((1+len)>>1)-1).fill('h[255*r.call()|0]').join('+')),str=id(HEX, r);
+	return function(){
+		return (num === 255)
+			? (str=id(HEX, r))+HEX[num=0]
+			: str+HEX[++num];
 	};
 }

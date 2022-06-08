@@ -25,12 +25,22 @@ test('length :: 8', () => {
 });
 
 
-test('length :: 24', () => {
+test('length :: 11', () => {
 	let i=0, tmp;
-	let gen = hexoid(24);
+	let gen = hexoid(11);
 	for (; i < 1e3; i++) {
 		tmp = gen();
-		assert.is(tmp.length, 24, `"${tmp}" is not 24 characters!`);
+		assert.is(tmp.length, 11, `"${tmp}" is not 11 characters!`);
+	}
+});
+
+
+test('length :: 25', () => {
+	let i=0, tmp;
+	let gen = hexoid(25);
+	for (; i < 1e3; i++) {
+		tmp = gen();
+		assert.is(tmp.length, 25, `"${tmp}" is not 25 characters!`);
 	}
 });
 

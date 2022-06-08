@@ -1,6 +1,6 @@
 import { test } from 'uvu';
 import * as assert from 'uvu/assert';
-import hexoid from '../src';
+import { hexoid } from '../src/index.js';
 
 test('exports', () => {
 	assert.type(hexoid, 'function', 'exports function');
@@ -53,5 +53,6 @@ test('unique', () => {
 	for (let i=5e6; i--;) items.add(gen());
 	assert.is(items.size, 5e6, '~> 5,000,000 uniques');
 });
+
 
 test.run();

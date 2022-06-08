@@ -10,7 +10,6 @@ Additionally, this module is delivered as:
 
 * **CommonJS**: [`dist/index.js`](https://unpkg.com/hexoid/dist/index.js)
 * **ES Module**: [`dist/index.mjs`](https://unpkg.com/hexoid/dist/index.mjs)
-* **UMD**: [`dist/index.min.js`](https://unpkg.com/hexoid/dist/index.min.js)
 
 ## Install
 
@@ -22,7 +21,7 @@ $ npm install --save hexoid
 ## Usage
 
 ```js
-import hexoid from 'hexoid';
+import { hexoid } from 'hexoid';
 
 const toID = hexoid();
 // length = 16 (default)

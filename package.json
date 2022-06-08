@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "repository": "lukeed/hexoid",
   "description": "A tiny (190B) and extremely fast utility to generate random IDs of fixed length",
-  "unpkg": "dist/index.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "types": "hexoid.d.ts",
   "license": "MIT",
   "author": {
     "name": "Luke Edwards",
@@ -17,11 +24,10 @@
     "node": ">=8"
   },
   "scripts": {
-    "build": "bundt",
-    "test": "uvu -r esm test -i collisions"
+    "build": "node bin/build",
+    "test": "uvu test -r esm -i collisions"
   },
   "files": [
-    "*.d.ts",
     "dist"
   ],
   "keywords": [
@@ -32,8 +38,8 @@
     "generate"
   ],
   "devDependencies": {
-    "bundt": "1.0.0",
     "esm": "3.2.25",
-    "uvu": "0.3.4"
+    "terser": "4.8.0",
+    "uvu": "0.5.3"
   }
 }

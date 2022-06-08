@@ -1,7 +1,7 @@
 var i=0,HEX=[];
 while (i<256) HEX[i]=(256+i++).toString(16).substring(1);
 
-export default function (len) {
+export function hexoid(len) {
 	len||(len=16);
 	var str='',lh =((1+len)>>1)-1,num=lh;
 	while (num--) str += HEX[255*Math.random()|0];

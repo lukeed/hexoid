@@ -12,7 +12,6 @@
     "./package.json": "./package.json"
   },
   "module": "dist/index.mjs",
-  "unpkg": "dist/index.min.js",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "license": "MIT",

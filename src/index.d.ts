@@ -1,1 +1,1 @@
-export default function (len?: number): () => string;
+export function hexoid(len?: number): () => string;

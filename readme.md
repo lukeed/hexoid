@@ -21,7 +21,7 @@ $ npm install --save hexoid
 ## Usage
 
 ```js
-import hexoid from 'hexoid';
+import { hexoid } from 'hexoid';
 
 const toID = hexoid();
 // length = 16 (default)

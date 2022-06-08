@@ -40,8 +40,7 @@ function transform(input, outputs) {
 	write(outputs.import, data);
 
 	// esm -> cjs -> minify
-	// data = data.replace('export function hexoid', 'exports.hexoid = function');
-	data = data.replace('export default function', 'module.exports = function');
+	data = data.replace('export function hexoid', 'exports.hexoid = function');
 	write(outputs.require, data);
 
 	if (outputs.types) {

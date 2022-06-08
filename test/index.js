@@ -1,6 +1,6 @@
 import { test } from 'uvu';
 import * as assert from 'uvu/assert';
-import hexoid from '../src/index.js';
+import { hexoid } from '../src/index.js';
 
 test('exports', () => {
 	assert.type(hexoid, 'function', 'exports function');

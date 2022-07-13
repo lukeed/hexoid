@@ -9,10 +9,10 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./unsafe": {
-      "types": "./unsafe/index.d.ts",
-      "import": "./unsafe/index.mjs",
-      "require": "./unsafe/index.js"
+    "./jit": {
+      "types": "./jit/index.d.ts",
+      "import": "./jit/index.mjs",
+      "require": "./jit/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -34,7 +34,7 @@
   },
   "files": [
     "dist",
-    "unsafe"
+    "jit"
   ],
   "keywords": [
     "id",

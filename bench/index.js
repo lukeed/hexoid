@@ -4,7 +4,7 @@ const assert = require('assert');
 const { Suite } = require('benchmark');
 const nanoid = require('nanoid/non-secure');
 const Hash = require('hashids/cjs');
-const hex2 = require('../unsafe');
+const hex2 = require('../jit');
 const hex1 = require('../dist');
 const uid = require('uid');
 
@@ -13,7 +13,7 @@ const size_16 = {
 	'nanoid/non-secure': nanoid.bind(nanoid, 16),
 	'uid': uid.bind(uid, 16),
 	'hexoid': hex1.hexoid(16),
-	'hexoid/unsafe': hex2.hexoid(16),
+	'hexoid/jit': hex2.hexoid(16),
 };
 
 const size_25 = {
@@ -22,7 +22,7 @@ const size_25 = {
 	'nanoid/non-secure': nanoid.bind(nanoid, 25),
 	'uid': uid.bind(uid, 25),
 	'hexoid': hex1.hexoid(25),
-	'hexoid/unsafe': hex2.hexoid(25),
+	'hexoid/jit': hex2.hexoid(25),
 };
 
 const size_36 = {
@@ -33,7 +33,7 @@ const size_36 = {
 	'nanoid/non-secure': nanoid.bind(nanoid, 36),
 	'uid': uid.bind(uid, 36),
 	'hexoid': hex1.hexoid(36),
-	'hexoid/unsafe': hex2.hexoid(36),
+	'hexoid/jit': hex2.hexoid(36),
 };
 
 function pad(str) {

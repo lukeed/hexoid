@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "repository": "lukeed/hexoid",
   "description": "A tiny (190B) and extremely fast utility to generate random IDs of fixed length",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./package.json": "./package.json"
-  },
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -26,6 +18,14 @@
   "scripts": {
     "build": "node bin/build",
     "test": "uvu test -r esm -i collisions"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
